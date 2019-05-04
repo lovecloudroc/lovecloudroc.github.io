@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | CloudRoc</title>
+  <title>Struts2-学习笔记 | CloudRoc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CloudRoc">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语是就会学习一下编程，整个人都会变得认真起来">
+<meta name="keywords" content="java,学习,Struts">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Struts2-学习笔记">
+<meta property="og:url" content="http://yoursite.com/2019/05/04/Struts2笔记/index.html">
 <meta property="og:site_name" content="CloudRoc">
+<meta property="og:description" content="最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语是就会学习一下编程，整个人都会变得认真起来">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-04T14:37:05.570Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CloudRoc">
+<meta name="twitter:title" content="Struts2-学习笔记">
+<meta name="twitter:description" content="最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语是就会学习一下编程，整个人都会变得认真起来">
   
     <link rel="alternative" href="/atom.xml" title="CloudRoc" type="application/atom+xml">
   
@@ -150,36 +155,95 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Struts2笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/04/Struts2笔记/" class="archive-article-date">
-  	<time datetime="2019-05-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/04/Struts2笔记/">Struts2-学习笔记</a>
+    <h1 class="article-title" itemprop="name">
+      Struts2-学习笔记
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/05/04/Struts2笔记/" class="archive-article-date">
+  	<time datetime="2019-05-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语是就会学习一下编程，整个人都会变得认真起来<br><a id="more"></a></p>
+<h1 id="struts2概述"><a href="#struts2概述" class="headerlink" title="struts2概述"></a>struts2概述</h1><ul>
+<li>版本struts-2.3.24-all</li>
+<li>web层常见框架<ul>
+<li>struts2</li>
+<li>springMVC </li>
+</ul>
+</li>
+<li>struts2解决的问题<br>以前在web中每个一个功能都需要需要一个servlet，在web阶段中创建BaseServlet来解决。Struts2中不同的操作，在类里面写不同的方法，通过滤器来选择，在Struts中不再用Servlet而是称作action。<br><h1 id="Struts2框架入门"><a href="#Struts2框架入门" class="headerlink" title="Struts2框架入门"></a>Struts2框架入门</h1></li>
+<li>第一步 创建web项目导入jar包<ul>
+<li>再lib中有jar包，不能把这些jar包都导入到项目中</li>
+<li>到apps目录里面，找示例程序，从示例程序中复制jar包（用压缩软件打开）。复制到项目的lib文件夹中。</li>
+</ul>
+</li>
+<li><p>第二部 创建antion</p>
+<ul>
+<li>创建一个action包，再包中创建一个类。<ul>
+<li>写类继承HttpServlet，重写类里面的方法</li>
+<li>在web.xml中配置servlet访问路径</li>
+</ul>
+</li>
+<li>每次访问servlet时候，都会执行service方法</li>
+<li><p>访问action，每次访问action时候，默认执行名称为execute方法 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String execute()&#123;</span><br><span class="line">    return &quot;ok&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第三步 配置action 类访问路径</p>
+<ul>
+<li>创建struts2核心配置文件<ul>
+<li>核心配置文件名称和位置是固定的</li>
+<li>位置必须在src下面，名称struts.xml</li>
+</ul>
+</li>
+<li>引入dtd约束（示例程序中可以找到）</li>
+<li>action 配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;struts&gt;</span><br><span class="line">    &lt;package name=&quot;hellodemo&quot; extends=&quot;struts-default&quot; namespace=&quot;/&quot;&gt;</span><br><span class="line">        &lt;action name=&quot;最终访问名称（例如hello）&quot; class=&quot;全路径（包名.类名）&quot;&gt;</span><br><span class="line">            &lt;!-- 配置方法的返回值到页面 --&gt;</span><br><span class="line">            &lt;result name=&quot;ok&quot;&gt;/hello.jsp&lt;/result&gt;</span><br><span class="line">        &lt;/action&gt;</span><br><span class="line">    &lt;/package&gt;</span><br><span class="line">&lt;/struts&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -199,65 +263,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/04/Struts2笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/27/本科毕业设计——奶牛场管理系统/" class="archive-article-date">
-  	<time datetime="2019-04-27T14:35:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/27/本科毕业设计——奶牛场管理系统/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">本科毕业设计——奶牛场管理系统</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/27/本科毕业设计——奶牛场管理系统/">本科毕业设计——奶牛场管理系统</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#struts2概述"><span class="toc-number">1.</span> <span class="toc-text">struts2概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Struts2框架入门"><span class="toc-number">2.</span> <span class="toc-text">Struts2框架入门</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -280,8 +398,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
