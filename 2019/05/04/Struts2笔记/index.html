@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Struts2-学习笔记 | CloudRoc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语是就会学习一下编程，整个人都会变得认真起来">
+  <meta name="description" content="&amp;emsp;&amp;emsp;最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语时就会学习一下编程，整个人都会变得认真起来">
 <meta name="keywords" content="java,学习,Struts">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Struts2-学习笔记">
 <meta property="og:url" content="http://yoursite.com/2019/05/04/Struts2笔记/index.html">
 <meta property="og:site_name" content="CloudRoc">
-<meta property="og:description" content="最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语是就会学习一下编程，整个人都会变得认真起来">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语时就会学习一下编程，整个人都会变得认真起来">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-04T14:37:05.570Z">
+<meta property="og:updated_time" content="2019-05-07T15:11:29.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Struts2-学习笔记">
-<meta name="twitter:description" content="最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语是就会学习一下编程，整个人都会变得认真起来">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语时就会学习一下编程，整个人都会变得认真起来">
   
     <link rel="alternative" href="/atom.xml" title="CloudRoc" type="application/atom+xml">
   
@@ -175,7 +175,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语是就会学习一下编程，整个人都会变得认真起来<br><a id="more"></a></p>
+        <p>&emsp;&emsp;最近在通过视频学习Strust2框架，这是我的一些笔记。一边看视频一边写笔记还可以熟悉markdown语法。正在复习准备考研，每天晚上回到家不想看数学英语时就会学习一下编程，整个人都会变得认真起来<br><a id="more"></a></p>
 <h1 id="struts2概述"><a href="#struts2概述" class="headerlink" title="struts2概述"></a>struts2概述</h1><ul>
 <li>版本struts-2.3.24-all</li>
 <li>web层常见框架<ul>
@@ -183,13 +183,13 @@
 <li>springMVC </li>
 </ul>
 </li>
-<li>struts2解决的问题<br>以前在web中每个一个功能都需要需要一个servlet，在web阶段中创建BaseServlet来解决。Struts2中不同的操作，在类里面写不同的方法，通过滤器来选择，在Struts中不再用Servlet而是称作action。<br><h1 id="Struts2框架入门"><a href="#Struts2框架入门" class="headerlink" title="Struts2框架入门"></a>Struts2框架入门</h1></li>
+<li>struts2解决的问题<br>&emsp;&emsp;以前在web中每个一个功能都需要一个servlet，在web阶段中创建BaseServlet来解决。Struts2中不同的操作，在类里面写不同的方法，通过滤器来选择，在Struts中不再用Servlet而是称作action。<br><h1 id="Struts2框架入门"><a href="#Struts2框架入门" class="headerlink" title="Struts2框架入门"></a>Struts2框架入门</h1></li>
 <li>第一步 创建web项目导入jar包<ul>
 <li>再lib中有jar包，不能把这些jar包都导入到项目中</li>
 <li>到apps目录里面，找示例程序，从示例程序中复制jar包（用压缩软件打开）。复制到项目的lib文件夹中。</li>
 </ul>
 </li>
-<li><p>第二部 创建antion</p>
+<li><p>第二部 创建action</p>
 <ul>
 <li>创建一个action包，再包中创建一个类。<ul>
 <li>写类继承HttpServlet，重写类里面的方法</li>
